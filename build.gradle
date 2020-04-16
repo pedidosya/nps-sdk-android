@@ -28,7 +28,3 @@ allprojects {
     }
 }
 
-subprojects {
-    group = GROUP
-    version = VERSION_NAME
-}

@@ -4,12 +4,7 @@ package com.github.ingeniconpslatam.nps;
 import android.content.Context;
 import android.os.StrictMode;
 import android.util.Log;
-
-import com.iovation.mobile.android.DevicePrint;
-//import com.iovation.mobile.android.FraudForceManager;
-//import com.iovation.mobile.android.FraudForceConfiguration;
-
-
+import com.iovation.mobile.android.FraudForceManager;
 import org.ksoap2.SoapEnvelope;
 import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
@@ -51,7 +46,7 @@ public class Nps {
         
 
 	static public String getDeviceFingerprint(Context context) {
-          return DevicePrint.ioBegin(context);
+          return FraudForceManager.getInstance().getBlackbox(context);
 	}
 
 
